@@ -1,17 +1,52 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+   <MoviesCard/>
+   <div v-for="movie in filterPost" :key="movie.id">
+       <MoviesContainer :movie="movie">
+         
+       </MoviesContainer>
+       
+   </div>
+   </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import MoviesContainer from './components/MoviesContainer'
+import MoviesCard from './components/MoviesCard'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {MoviesContainer, MoviesCard},
+  data(){
+     return{
+      //  search: '',
+      //  showMovie: false,
+      //  movies: [],
+       
+    
+     }
+  },
+
+  
+  methods: {
+  
+  //  mounted () {
+  //   axios
+  //     .get(this.api_url)
+  //     .then(response => response.json())
+  //     .then(data => data.this.movies)
+  // }
+
+  },
+
+  computed: {
+    // filterPost() {
+
+    //   return this.movies.filter(movie => movie.body.toLowerCase().includes(this.search.toLowerCase()))
+     
+    // }
   }
 }
 </script>
@@ -26,3 +61,6 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+
+// http://www.omdbapi.com/?apikey=21ce1676&
