@@ -4,13 +4,12 @@
      <p>{{movies}}</p>
       <p>{{movies.Title}}</p>
      <input type="text" v-model="search" placeholder="Enter name here...">
-      <!-- <div v-for="movie in movies" :key="movie" > -->
+   
         <ul >
           <li v-for="(movie, index) in movies" :key="index">{{movie.Year}} !!</li>
         </ul>
         <h1></h1>
-        
-      <!-- </div>   -->
+  
    
 </div>
 </template>
@@ -18,7 +17,7 @@
 <script>
 
 
- //const API = 'http://www.omdbapi.com/?i=tt3896198&apikey=21ce1676'
+ 
 export default {
   data(){
     return {
@@ -44,14 +43,6 @@ export default {
 
     
   }
-  // methods: {
-  //      async fetchApi(){
-  //       await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=21ce1676')
-  //       .then(res => res.json()
-  //       .then(data => this.responseData = data.data)
-  //       .catch( err => console.log(err))
-  //     }
-  // },
 
 
 }

@@ -21,10 +21,6 @@ export default {
   components: {MoviesContainer, MoviesCard},
   data(){
      return{
-      //  search: '',
-      //  showMovie: false,
-      //  movies: [],
-       
     
      }
   },
@@ -32,21 +28,11 @@ export default {
   
   methods: {
   
-  //  mounted () {
-  //   axios
-  //     .get(this.api_url)
-  //     .then(response => response.json())
-  //     .then(data => data.this.movies)
-  // }
 
   },
 
   computed: {
-    // filterPost() {
-
-    //   return this.movies.filter(movie => movie.body.toLowerCase().includes(this.search.toLowerCase()))
-     
-    // }
+   
   }
 }
 </script>
@@ -63,4 +49,3 @@ export default {
 </style>
 
 
-// http://www.omdbapi.com/?apikey=21ce1676&
